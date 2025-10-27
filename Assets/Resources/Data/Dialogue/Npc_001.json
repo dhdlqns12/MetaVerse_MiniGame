@@ -1,0 +1,34 @@
+{
+  "dial": [
+    {
+      "id": 0,
+      "speaker": "NPC",
+      "text": "반갑네! 이 곳엔 처음인가?",
+      "choices": [
+        {
+          "text": "예",
+          "nextDialId": 1
+        },
+        {
+          "text": "아니요",
+          "nextDialId": 2
+        }
+      ],
+      "nextDialId": -1
+    },
+    {
+      "id": 1,
+      "speaker": "NPC",
+      "text": "이곳은 메타버스 세계라네! 원하는 미니게임을 플레이하고 골드를 얻어 자신을 꾸미거나 점수를 높여 리더보드에 기록해보게!",
+      "choices": [],
+      "nextDialId": -1
+    },
+    {
+      "id": 2,
+      "speaker": "NPC",
+      "text": "알았네... 잘 가시게!",
+      "choices": [],
+      "nextDialId": -1
+    }
+  ]
+}
