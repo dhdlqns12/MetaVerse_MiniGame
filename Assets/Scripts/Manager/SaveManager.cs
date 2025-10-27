@@ -36,7 +36,6 @@ public class SaveManager : Singleton<SaveManager>
 
     private void OnSceneUnloaded(Scene scene)
     {
-        Debug.Log($"{scene.name}");
         AutoSave();
     }
 

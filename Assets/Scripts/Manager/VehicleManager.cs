@@ -51,7 +51,7 @@ public class VehicleManager : MonoBehaviour
 
     public Product GetVehicle(int vehicleId)
     {
-        if (vehicleList != null && vehicleList.TryGetValue(vehicleId, out var vehicle))
+        if (vehicleList.TryGetValue(vehicleId, out var vehicle))
         {
             return vehicle;
         }
@@ -61,7 +61,7 @@ public class VehicleManager : MonoBehaviour
 
     public VehicleData? GetVehicleData(int vehicleId)
     {
-        if (vehicleDataList != null && vehicleDataList.TryGetValue(vehicleId, out var data))
+        if (vehicleDataList.TryGetValue(vehicleId, out var data))
         {
             return data;
         }
