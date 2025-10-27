@@ -49,6 +49,7 @@ public class PlayerCustomizing : MonoBehaviour
         }
     }
 
+    #region 스킨 적용
     public void ApplyCharacterSkin(Sprite skinSprite, RuntimeAnimatorController animatorOverride)
     {
         if (playerSpriteRenderer != null&& playerAnimator != null)
@@ -66,7 +67,9 @@ public class PlayerCustomizing : MonoBehaviour
             }
         }
     }
+    #endregion
 
+    #region 탈것 적용
     public void ApplyVehicle(int vehicleID, VehicleManager vehicleManager)
     {
         if (vehicleID == 0)
@@ -148,6 +151,29 @@ public class PlayerCustomizing : MonoBehaviour
         vehicleEquipped?.Invoke();
     }
 
+    public float GetCurrentSpeed()
+    {
+        if (shopManager.customizingData.selectedVehicleID == 0)
+            return 0f;
+
+        return vehicleManager.GetVehicleSpeed(shopManager.customizingData.selectedVehicleID);
+    }
+
+    public bool IsRidingVehicle()
+    {
+        return vehicleSlot != null && vehicleSlot.activeSelf;
+    }
+
+    public void SetFlip(bool flip)
+    {
+        if (vehicleRenderer != null && vehicleSlot.activeSelf)
+        {
+            vehicleRenderer.flipX = flip;
+        }
+    }
+    #endregion
+
+    #region 탈것/스킨 동시 적용
     public void ApplyCurrentCustomization(ShopManager shopManager, VehicleManager vehicleManager)
     {
         Product skin = shopManager.GetProductId(shopManager.customizingData.selectedSkinID);
@@ -165,25 +191,5 @@ public class PlayerCustomizing : MonoBehaviour
             UnequipVehicle();
         }
     }
-
-    public float GetCurrentSpeed()
-    {
-        if (shopManager.customizingData.selectedVehicleID == 0)
-            return 0f;
-
-        return vehicleManager.GetVehicleSpeed(shopManager.customizingData.selectedVehicleID);
-    }
-
-    public void SetFlip(bool flip)
-    {
-        if (vehicleRenderer != null && vehicleSlot.activeSelf)
-        {
-            vehicleRenderer.flipX = flip;
-        }
-    }
-
-    public bool IsRidingVehicle()
-    {
-        return vehicleSlot != null && vehicleSlot.activeSelf;
-    }
+    #endregion
 }

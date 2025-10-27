@@ -19,6 +19,7 @@ public class VehicleManager : MonoBehaviour
         LoadVehicleData();
     }
 
+    #region 탈 것 정보 불러오기
     private void LoadVehicleData()
     {
         TextAsset jsonFile = Resources.Load<TextAsset>("Data/VehicleData");
@@ -78,4 +79,5 @@ public class VehicleManager : MonoBehaviour
     {
         return vehicleProducts;
     }
+    #endregion
 }

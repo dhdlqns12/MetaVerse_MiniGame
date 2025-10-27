@@ -27,6 +27,7 @@ public class ShopManager : MonoBehaviour
         playerCustomizing.ApplyCurrentCustomization(this,vehicleManager);
     }
 
+    #region 구매 관련
     public bool PurchaseProduct(int productId)
     {
         if (shopData.purchasedProducts.Contains(productId))
@@ -49,6 +50,13 @@ public class ShopManager : MonoBehaviour
         return false;
     }
 
+    public bool IsPurchased(int productID)
+    {
+        return shopData.purchasedProducts.Contains(productID) || productID == 0;
+    }
+    #endregion
+
+    #region 아이템 선택
     public void SelectProduct(int productId)
     {
         if (!shopData.purchasedProducts.Contains(productId) && productId != 0)
@@ -68,7 +76,7 @@ public class ShopManager : MonoBehaviour
         else if (product.type == ProductType.Vehicle)
         {
             customizingData.selectedVehicleID = productId;
-            playerCustomizing.ApplyVehicle(productId,vehicleManager);
+            playerCustomizing.ApplyVehicle(productId, vehicleManager);
         }
 
         SaveManager.Instance.SaveCustomizationData(customizingData);
@@ -82,17 +90,15 @@ public class ShopManager : MonoBehaviour
 
         return allProducts.Find(p => p.productID == productId);
     }
+    #endregion
 
-    public bool IsPurchased(int productID)
-    {
-        return shopData.purchasedProducts.Contains(productID) || productID == 0;
-    }
-
+    #region 데이터 불러오기
     private void LoadData()
     {
         shopData = SaveManager.Instance.LoadShopData();
         customizingData = SaveManager.Instance.LoadCustomizationData();
         vehicle = vehicleManager.GetAllVehicles();
     }
+    #endregion
 }
 

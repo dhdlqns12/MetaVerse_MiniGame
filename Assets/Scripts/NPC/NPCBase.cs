@@ -23,6 +23,12 @@ public class NPCBase : MonoBehaviour
         }
     }
 
+    public virtual void Interact()
+    {
+        OnNPCInteract?.Invoke(this);
+    }
+
+    #region 대화
     private void LoadDialogueData()
     {
         TextAsset jsonFile = Resources.Load<TextAsset>($"Data/Dialogue/{dialogueFileName}");
@@ -34,11 +40,6 @@ public class NPCBase : MonoBehaviour
         }
     }
 
-    public virtual void Interact()
-    {
-        OnNPCInteract?.Invoke(this);
-    }
-
     public DialogueDataList GetDialogueData()
     {
         return dialogueLoaded ? dialogueData : null;
@@ -48,5 +49,6 @@ public class NPCBase : MonoBehaviour
     {
         return dialogueFileName;
     }
+    #endregion
 }
 

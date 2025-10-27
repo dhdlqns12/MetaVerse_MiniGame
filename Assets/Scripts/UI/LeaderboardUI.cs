@@ -32,6 +32,7 @@ public class LeaderboardUI : MonoBehaviour
         spacing = 22f;
     }
 
+    #region 리더보드 UI표시
     public void RefreshLeaderboards()
     {
         DisplayLeaderboard("FlappyBird", flappyBirdList);
@@ -77,4 +78,5 @@ public class LeaderboardUI : MonoBehaviour
             }
         }
     }
+    #endregion
 }

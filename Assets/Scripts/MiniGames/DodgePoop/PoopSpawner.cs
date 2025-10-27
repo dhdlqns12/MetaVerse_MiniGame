@@ -60,6 +60,7 @@ public class PoopSpawner : MonoBehaviour
         spawnRangeX = 9f;
     }
 
+    #region 똥 생성 관련
     private void SpawnPoop()
     {
         float randomX = Random.Range(-spawnRangeX, spawnRangeX);
@@ -72,5 +73,6 @@ public class PoopSpawner : MonoBehaviour
     {
         isSpawning = false;
     }
+    #endregion
 }
 

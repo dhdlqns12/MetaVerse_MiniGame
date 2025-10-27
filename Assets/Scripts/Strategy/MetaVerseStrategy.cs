@@ -70,19 +70,6 @@ public class MetaVerseStrategy : IPlayerStrategy
         UpdateMoveSpeed();
     }
 
-    private void UpdateMoveSpeed()
-    {
-        if (playerCustomizing != null && playerCustomizing.IsRidingVehicle())
-        {
-            float vehicleSpeed = playerCustomizing.GetCurrentSpeed();
-            moveSpeed = baseMoveSpeed + vehicleSpeed;
-        }
-        else
-        {
-            moveSpeed = baseMoveSpeed;
-        }
-    }
-
     #region 플레이어 제어
     public void HandleMove(InputAction.CallbackContext context)
     {
@@ -184,6 +171,19 @@ public class MetaVerseStrategy : IPlayerStrategy
         if (playerCustomizing != null)
         {
             playerCustomizing.SetFlip(flip);
+        }
+    }
+
+    private void UpdateMoveSpeed()
+    {
+        if (playerCustomizing != null && playerCustomizing.IsRidingVehicle())
+        {
+            float vehicleSpeed = playerCustomizing.GetCurrentSpeed();
+            moveSpeed = baseMoveSpeed + vehicleSpeed;
+        }
+        else
+        {
+            moveSpeed = baseMoveSpeed;
         }
     }
     #endregion
