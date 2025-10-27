@@ -8,7 +8,7 @@ using UnityEngine.SocialPlatforms.Impl;
 public class GameManager : Singleton<GameManager>
 {
 
-    [Header("ÇöÀç Àü·«")]
+    [Header("í˜„ì¬ ì „ëµ")]
     public PlayerController.StrategyType curStrategy;
 
     public event Action<int> OnGoldChanged;
@@ -23,7 +23,7 @@ public class GameManager : Singleton<GameManager>
         }
     }
 
-    [Header("ÀúÀå µ¥ÀÌÅÍ")]
+    [Header("ì €ì¥ ë°ì´í„°")]
     public PlayerData playerData;
     public GameData gameData;
     public LeaderboardData leaderboardData;

@@ -21,7 +21,7 @@ public class PlayerCollisionCheck : MonoBehaviour
         HandleCollision(collision.gameObject);
     }
 
-    #region Ãæµ¹Á¦¾î
+    #region ì¶©ëŒì œì–´
     private void HandleCollision(GameObject target)
     {
         if (miniGameManager == null) 

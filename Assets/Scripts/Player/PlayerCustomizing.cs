@@ -6,19 +6,19 @@ using UnityEngine;
 
 public class PlayerCustomizing : MonoBehaviour
 {
-    [Header("½ºÅ²")]
+    [Header("ìŠ¤í‚¨")]
     [SerializeField] private GameObject player;
     [SerializeField] private SpriteRenderer playerSpriteRenderer;
     [SerializeField] private Animator playerAnimator;
     [SerializeField] private Collider2D playerCollider;
 
-    [Header("Å»°Í")]
+    [Header("íƒˆê²ƒ")]
     [SerializeField] private GameObject vehicleSlot;
     [SerializeField] private SpriteRenderer vehicleRenderer;
     [SerializeField] private Animator vehicleAnimator;
     [SerializeField] private Collider2D vehicleCollider;
 
-    [Header("Á÷Á¢ ÂüÁ¶")]
+    [Header("ì§ì ‘ ì°¸ì¡°")]
     [SerializeField] private ShopManager shopManager;
     [SerializeField] private VehicleManager vehicleManager;
 

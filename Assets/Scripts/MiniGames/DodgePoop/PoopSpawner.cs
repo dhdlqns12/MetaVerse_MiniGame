@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class PoopSpawner : MonoBehaviour
 {
-    [Header("¶Ë ÇÁ¸®ÆÕ")]
+    [Header("ë˜¥ í”„ë¦¬íŒ¹")]
     [SerializeField] private GameObject poopPrefab;
 
-    [Header("½ºÆù ¼³Á¤")]
+    [Header("ìŠ¤í° ì„¤ì •")]
     [SerializeField] private float initialSpawnTime;
     [SerializeField] private float minSpawnTime;
     [SerializeField] private float decreaseRate;
 
-    [Header("½ºÆù ¹üÀ§")]
+    [Header("ìŠ¤í° ë²”ìœ„")]
     [SerializeField] private float spawnHeight;
     [SerializeField] private float spawnRangeX ;
 

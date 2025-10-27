@@ -13,8 +13,8 @@ public class Product : ScriptableObject
 {
     public int productID;
     public string productName;
-    public Sprite productIcon; //UI¿¡ Ç¥½ÃÇÒ ½ºÇÁ¶óÀÌÆ®
-    public Sprite productSprite; //½ÇÁ¦ Àû¿ëµÉ ½ºÇÁ¶óÀÌÆ®
+    public Sprite productIcon; //UIì— í‘œì‹œí•  ìŠ¤í”„ë¼ì´íŠ¸
+    public Sprite productSprite; //ì‹¤ì œ ì ìš©ë  ìŠ¤í”„ë¼ì´íŠ¸
     public RuntimeAnimatorController animatorOverride;
     public int price;
     public ProductType type;

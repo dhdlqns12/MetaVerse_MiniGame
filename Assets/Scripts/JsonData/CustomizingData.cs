@@ -1,9 +1,9 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public struct CustomizingData
 {
-    public int selectedSkinID; // ¼±ÅÃµÈ Ä³¸¯ÅÍ ½ºÅ²
-    public int selectedVehicleID; // ¼±ÅÃµÈ Å»°Í
+    public int selectedSkinID; // ì„ íƒëœ ìºë¦­í„° ìŠ¤í‚¨
+    public int selectedVehicleID; // ì„ íƒëœ íƒˆê²ƒ
 }

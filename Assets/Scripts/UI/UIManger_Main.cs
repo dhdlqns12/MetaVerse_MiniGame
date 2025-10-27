@@ -5,16 +5,16 @@ using UnityEngine.UI;
 
 public class UIManger_Main : MonoBehaviour
 {
-    [Header("¹öÆ°")]
+    [Header("ë²„íŠ¼")]
     [SerializeField] private Button startGameBtn;
     [SerializeField] private Button[] closeBtn;
     [SerializeField] private Button customizingOpenBtn;
 
-    [Header("ÅØ½ºÆ®")]
+    [Header("í…ìŠ¤íŠ¸")]
     [SerializeField] private Text bestScore_Txt;
     [SerializeField] private Text gold_Txt;
 
-    [Header("ÆĞ³Î")]
+    [Header("íŒ¨ë„")]
     [SerializeField] private GameObject gameGuidePanel;
     [SerializeField] private Text gameNameText;
     [SerializeField] private Text gameDescriptionText;
@@ -36,7 +36,7 @@ public class UIManger_Main : MonoBehaviour
 
     private void Start()
     {
-        UpdateGold(GameManager.Instance.Gold); // È£Ãâ ¼ø¼­ ¹®Á¦·Î SubScribeEnvents¿¡ ³ÖÀ» °æ¿ì GameManager¿¡¼­ Awake¿¡ÀÖ´Â LoadGameº¸´Ù ¸ÕÀú UIManager_MainÀÇ OnEnableÀÌ È£ÃâµÊ... À¯´ÏÆ¼ ¿¡µğÅÍ¿¡¼­ °­Á¦·Î È£ÃâµÉ ½ºÅ©¸³Æ®¸£ ÁöÁ¤ÇØ ÁÙ ¼ø ÀÖÁö¸¸ Start·Î ¿Å°Ü¼­ ÇØ°á                                               // µÇ±â ¶§¹®¿¡ STart·Î ¿Å°Ü¼­ ÇØ°á...
+        UpdateGold(GameManager.Instance.Gold); // í˜¸ì¶œ ìˆœì„œ ë¬¸ì œë¡œ SubScribeEnventsì— ë„£ì„ ê²½ìš° GameManagerì—ì„œ Awakeì—ìˆëŠ” LoadGameë³´ë‹¤ ë¨¼ì € UIManager_Mainì˜ OnEnableì´ í˜¸ì¶œë¨... ìœ ë‹ˆí‹° ì—ë””í„°ì—ì„œ ê°•ì œë¡œ í˜¸ì¶œë  ìŠ¤í¬ë¦½íŠ¸ë¥´ ì§€ì •í•´ ì¤„ ìˆœ ìˆì§€ë§Œ Startë¡œ ì˜®ê²¨ì„œ í•´ê²°                                               // ë˜ê¸° ë•Œë¬¸ì— STartë¡œ ì˜®ê²¨ì„œ í•´ê²°...
     }
 
     private void OnDisable()
@@ -66,7 +66,7 @@ public class UIManger_Main : MonoBehaviour
         startGameBtn?.onClick.RemoveListener(OnStartGameClicked);
         customizingOpenBtn?.onClick.RemoveListener(ShowCustomizingPanel);
 
-        if (GameManager.Instance != null) // ¾ÈÇØµµ µÇ±ä ÇÏ´Âµ¥ UnityEditor¿¡¼­ °ÔÀÓ ÇÃ·¹ÀÌ Á¾·á½Ã Error¶ß´Â°Ô º¸±â ½È¾î¼­ »ğÀÔ
+        if (GameManager.Instance != null) // ì•ˆí•´ë„ ë˜ê¸´ í•˜ëŠ”ë° UnityEditorì—ì„œ ê²Œì„ í”Œë ˆì´ ì¢…ë£Œì‹œ Errorëœ¨ëŠ”ê²Œ ë³´ê¸° ì‹«ì–´ì„œ ì‚½ì…
         {
             GameManager.Instance.OnGoldChanged -= UpdateGold;
         }
@@ -102,7 +102,7 @@ public class UIManger_Main : MonoBehaviour
         ShowDialogue(npc);
     }
 
-    #region ´ëÈ­
+    #region ëŒ€í™”
     private void ShowDialogue(NPCBase npc)
     {
         DialogueDataList dialogueData = npc.GetDialogueData();
@@ -115,7 +115,7 @@ public class UIManger_Main : MonoBehaviour
     }
     #endregion
 
-    #region ÆĞ³Î Á¦¾î
+    #region íŒ¨ë„ ì œì–´
     private void ShowGameGuidePanel(GameNPC npc)
     {
         if (gameGuidePanel == null) return;
@@ -158,13 +158,13 @@ public class UIManger_Main : MonoBehaviour
         customizingPanel?.SetActive(false);
         leaderboardPanel?.SetActive(false);
 
-        cur_GameNPC = null; // npc¿Í ¹Ù·Î »óÈ£ÀÛ¿ëÇßÀ»¶§ Ã¢ÀÌ ¹Ù·Î ¿­¸®°í ´İÈ÷´Â°É ¸·±â À§ÇØ
+        cur_GameNPC = null; // npcì™€ ë°”ë¡œ ìƒí˜¸ì‘ìš©í–ˆì„ë•Œ ì°½ì´ ë°”ë¡œ ì—´ë¦¬ê³  ë‹«íˆëŠ”ê±¸ ë§‰ê¸° ìœ„í•´
         cur_ShopNPC = null;
         cur_Leaderboard_NPC = null;
     }
     #endregion
 
-    #region ¹öÆ° ÀÌº¥Æ®
+    #region ë²„íŠ¼ ì´ë²¤íŠ¸
     private void OnStartGameClicked()
     {
         if (cur_GameNPC != null)
@@ -181,7 +181,7 @@ public class UIManger_Main : MonoBehaviour
     }
     #endregion
 
-    #region º£½ºÆ® Á¡¼ö Ç¥½Ã
+    #region ë² ìŠ¤íŠ¸ ì ìˆ˜ í‘œì‹œ
     private void UpdateCurrentGameBestScore(GameNPC npc)
     {
         if (GameManager.Instance == null) return;
@@ -202,19 +202,19 @@ public class UIManger_Main : MonoBehaviour
 
         if (bestScore_Txt != null)
         {
-            bestScore_Txt.text = $"{npc.gameSceneName} ÃÖ°íÁ¡¼ö: {bestScore}";
+            bestScore_Txt.text = $"{npc.gameSceneName} ìµœê³ ì ìˆ˜: {bestScore}";
         }
     }
     #endregion
 
-    #region °ñµå Ç¥½Ã
+    #region ê³¨ë“œ í‘œì‹œ
     private void UpdateGold(int gold)
     {
-        Debug.Log($"UpdateGold È£Ãâ gold: {gold}");
+        Debug.Log($"UpdateGold í˜¸ì¶œ gold: {gold}");
         if (gold_Txt != null)
         {
             gold_Txt.text = $"Gold: {gold}";
-            Debug.Log($"gold_Txt ¾÷µ¥ÀÌÆ® ¿Ï·á: {gold_Txt.text}");
+            Debug.Log($"gold_Txt ì—…ë°ì´íŠ¸ ì™„ë£Œ: {gold_Txt.text}");
         }
     }
     #endregion

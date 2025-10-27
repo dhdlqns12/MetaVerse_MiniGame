@@ -8,7 +8,7 @@ public class MiniGameManager_Flappy : MonoBehaviour,IMiniGameManager
 {
     public bool IsGameOver { get; private set; }
 
-    [Header("Á¡¼ö")]
+    [Header("ì ìˆ˜")]
     public int curScroe_Flappy;
 
     private void OnEnable()

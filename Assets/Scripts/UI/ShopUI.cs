@@ -6,25 +6,25 @@ using UnityEngine.UI;
 
 public class ShopUI : MonoBehaviour
 {
-    [Header("Shop Manager")]
+    [Header("ì§ì ‘ ì°¸ì¡°")]
     [SerializeField] private ShopManager shopManager;
 
-    [Header("ÅÇ ÀüÈ¯ ¹öÆ°")]
+    [Header("íƒ­ ì „í™˜ ë²„íŠ¼")]
     [SerializeField] private Button customTabBtn;
     [SerializeField] private Button vehicleTabBtn;
     [SerializeField] private Button customCloseBtn;
     [SerializeField] private Button vehicleCloseBtn;
 
-    [Header("ÅÇ Panel")]
+    [Header("íƒ­ Panel")]
     [SerializeField] private GameObject customTabPanel;
     [SerializeField] private GameObject vehicleTabPanel;
 
-    [Header("»óÇ° ¸®½ºÆ®")]
+    [Header("ìƒí’ˆ ë¦¬ìŠ¤íŠ¸")]
     [SerializeField] private Transform customProductList;
     [SerializeField] private Transform vehicleProductList;
     public GameObject productBtnPrefab;
 
-    [Header("¼ÒÁö±İ")]
+    [Header("ì†Œì§€ê¸ˆ")]
     public Text goldTxt;
 
     private void OnEnable()
@@ -55,7 +55,7 @@ public class ShopUI : MonoBehaviour
         vehicleCloseBtn?.onClick.RemoveListener(CloseVehicleTab);
     }
 
-    #region ÅÇÀüÈ¯
+    #region íƒ­ì „í™˜
     private void ShowCustomTab()
     {
         customTabPanel?.SetActive(true);
@@ -79,7 +79,7 @@ public class ShopUI : MonoBehaviour
     }
     #endregion
 
-    #region »óÁ¡ ¹°Ç° µî·Ï
+    #region ìƒì  ë¬¼í’ˆ ë“±ë¡
     private void CreateProductList(List<Product> products, Transform parent, ProductType type)
     {
         foreach (Transform child in parent)
@@ -122,7 +122,7 @@ public class ShopUI : MonoBehaviour
     }
     #endregion
 
-    #region »óÁ¡ »õ·Î°íÄ§
+    #region ìƒì  ìƒˆë¡œê³ ì¹¨
     private void RefreshCurrentTab(ProductType type)
     {
         if (type == ProductType.CharacterSkin)

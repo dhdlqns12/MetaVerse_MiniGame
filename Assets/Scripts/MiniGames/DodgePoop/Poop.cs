@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Poop : MonoBehaviour
 {
-    [Header("¼Óµµ")]
+    [Header("ì†ë„")]
     [SerializeField] private float fallSpeed = 5f;
 
 

@@ -5,19 +5,19 @@ using UnityEngine.UI;
 
 public class UIManager_Dodge : MonoBehaviour
 {
-    [Header("¹öÆ°")]
+    [Header("ë²„íŠ¼")]
     [SerializeField] private Button restartBtn;
     [SerializeField] private Button goToMainBtn;
 
-    [Header("ÅØ½ºÆ®")]
+    [Header("í…ìŠ¤íŠ¸")]
     [SerializeField] private Text time_Txt;
     [SerializeField] private Text score_Txt;
     [SerializeField] private Text bestScore_Txt;
 
-    [Header("ÆĞ³Î")]
+    [Header("íŒ¨ë„")]
     [SerializeField] private GameObject gameOverPanel;
 
-    [Header("¸Å´ÏÀú")]
+    [Header("ì§ì ‘ ì°¸ì¡°")]
     [SerializeField] private MiniGameManager_Poop gameManager_Mini;
 
     private int lastScore = -1;
@@ -51,7 +51,7 @@ public class UIManager_Dodge : MonoBehaviour
         }
     }
 
-    #region ÀÌº¥Æ® ±¸µ¶/ÇØÁ¦
+    #region ì´ë²¤íŠ¸ êµ¬ë…/í•´ì œ
     private void SubscribeEvents()
     {
         restartBtn?.onClick.AddListener(OnRestartClick);
@@ -65,10 +65,10 @@ public class UIManager_Dodge : MonoBehaviour
     }
     #endregion
 
-    #region ¹öÆ° ÀÌº¥Æ®
+    #region ë²„íŠ¼ ì´ë²¤íŠ¸
     private void OnRestartClick()
     {
-        Debug.Log("Àç½ÃÀÛ ¹öÆ° Å¬¸¯µÊ!");
+        Debug.Log("ì¬ì‹œì‘ ë²„íŠ¼ í´ë¦­ë¨!");
         Time.timeScale = 1f;
         gameManager_Mini?.RestartGame();
     }
@@ -80,7 +80,7 @@ public class UIManager_Dodge : MonoBehaviour
     }
     #endregion
 
-    #region UI ¾÷µ¥ÀÌÆ®
+    #region UI ì—…ë°ì´íŠ¸
     private void UpdateScoreUI()
     {
         if (gameManager_Mini == null) return;

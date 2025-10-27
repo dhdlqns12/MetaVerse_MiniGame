@@ -13,14 +13,14 @@ public class MetaVerseStrategy : IPlayerStrategy
     private SpriteRenderer spriteRenderer;
     private PlayerCustomizing playerCustomizing;
 
-    [Header("ÇÃ·¹ÀÌ¾î ÀÌµ¿ ¹× »óÈ£ÀÛ¿ë")]
+    [Header("í”Œë ˆì´ì–´ ì´ë™ ë° ìƒí˜¸ì‘ìš©")]
     private Vector2 input_Vec2;
 
     [SerializeField] private float baseMoveSpeed;
     [SerializeField] private float moveSpeed;
     [SerializeField] private float interactRange;
 
-    [Header("Ä«¸Ş¶ó ¹× °æ°è Á¦ÇÑ")]
+    [Header("ì¹´ë©”ë¼ ë° ê²½ê³„ ì œí•œ")]
     [SerializeField] private Camera mainCamera;
     [SerializeField] private float padding;
     [SerializeField] private Vector2 min;
@@ -83,7 +83,7 @@ public class MetaVerseStrategy : IPlayerStrategy
         }
     }
 
-    #region ÇÃ·¹ÀÌ¾î Á¦¾î
+    #region í”Œë ˆì´ì–´ ì œì–´
     public void HandleMove(InputAction.CallbackContext context)
     {
         if (context.performed)
@@ -149,11 +149,11 @@ public class MetaVerseStrategy : IPlayerStrategy
         }
         else
         {
-            Debug.Log("ÁÖº¯¿¡ NPC°¡ ¾ø½À´Ï´Ù.");
+            Debug.Log("ì£¼ë³€ì— NPCê°€ ì—†ìŠµë‹ˆë‹¤.");
         }
     }
 
-    private void ClampPosition() // ÇÃ·¹ÀÌ¾î ÀÌµ¿ Á¦ÇÑ
+    private void ClampPosition() // í”Œë ˆì´ì–´ ì´ë™ ì œí•œ
     {
         Vector3 clampedPosition = player.transform.position;
         clampedPosition.x = Mathf.Clamp(clampedPosition.x, min.x, max.x);
@@ -161,7 +161,7 @@ public class MetaVerseStrategy : IPlayerStrategy
         player.transform.position = clampedPosition;
     }
 
-    private void CalculateCameraLimit() // Ä«¸Ş¶ó ±â¹İ °æ°è °è»ê
+    private void CalculateCameraLimit() // ì¹´ë©”ë¼ ê¸°ë°˜ ê²½ê³„ ê³„ì‚°
     {
         if (mainCamera == null) return;
 
@@ -188,7 +188,7 @@ public class MetaVerseStrategy : IPlayerStrategy
     }
     #endregion
 
-    #region Á¤¸®
+    #region ì •ë¦¬
     public void Clean()
     {
         input_Vec2 = Vector2.zero;

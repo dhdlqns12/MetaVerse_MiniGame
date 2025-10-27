@@ -48,7 +48,7 @@ public class SaveManager : Singleton<SaveManager>
         }
     }
 
-    #region ÇÃ·¹ÀÌ¾î µ¥ÀÌÅÍ ÀúÀå/·Îµå
+    #region í”Œë ˆì´ì–´ ë°ì´í„° ì €ì¥/ë¡œë“œ
     public void SavePlayerData(PlayerData data)
     {
         try
@@ -59,7 +59,7 @@ public class SaveManager : Singleton<SaveManager>
         }
         catch (Exception e)
         {
-            Debug.LogError($"PlayerData ÀúÀå ½ÇÆĞ: {e.Message}");
+            Debug.LogError($"PlayerData ì €ì¥ ì‹¤íŒ¨: {e.Message}");
         }
     }
 
@@ -77,18 +77,18 @@ public class SaveManager : Singleton<SaveManager>
             }
             else
             {
-                return new PlayerData(); // ÀúÀå µ¥ÀÌÅÍ ¾ø´Â »õ °ÔÀÓ ½ÃÀÛ½Ã  null¹æÁöÇÏ±â À§ÇØ »õ·Î  »ı¼º
+                return new PlayerData(); // ì €ì¥ ë°ì´í„° ì—†ëŠ” ìƒˆ ê²Œì„ ì‹œì‘ì‹œ  nullë°©ì§€í•˜ê¸° ìœ„í•´ ìƒˆë¡œ  ìƒì„±
             }
         }
         catch (Exception e)
         {
-            Debug.LogError($"PlayerData ºÒ·¯¿À±â ½ÇÆĞ: {e.Message}");
+            Debug.LogError($"PlayerData ë¶ˆëŸ¬ì˜¤ê¸° ì‹¤íŒ¨: {e.Message}");
             return new PlayerData();
         }
     }
     #endregion
 
-    #region °ÔÀÓ µ¥ÀÌÅÍ ÀúÀå/·Îµå
+    #region ê²Œì„ ë°ì´í„° ì €ì¥/ë¡œë“œ
     public void SaveGameData(GameData data)
     {
         string json = JsonUtility.ToJson(data, true);
@@ -110,18 +110,18 @@ public class SaveManager : Singleton<SaveManager>
             }
             else
             {
-                return new GameData(); // ÀúÀå µ¥ÀÌÅÍ ¾ø´Â »õ °ÔÀÓ ½ÃÀÛ½Ã null¹æÁöÇÏ±â À§ÇØ »õ·Î  »ı¼º
+                return new GameData(); // ì €ì¥ ë°ì´í„° ì—†ëŠ” ìƒˆ ê²Œì„ ì‹œì‘ì‹œ nullë°©ì§€í•˜ê¸° ìœ„í•´ ìƒˆë¡œ  ìƒì„±
             }
         }
         catch (Exception e)
         {
-            Debug.LogError($"GameData ºÒ·¯¿À±â ½ÇÆĞ: {e.Message}");
+            Debug.LogError($"GameData ë¶ˆëŸ¬ì˜¤ê¸° ì‹¤íŒ¨: {e.Message}");
             return new GameData();
         }
     }
     #endregion
 
-    #region »óÁ¡ µ¥ÀÌÅÍ ÀúÀå/·Îµå
+    #region ìƒì  ë°ì´í„° ì €ì¥/ë¡œë“œ
     public void SaveShopData(ShopData data)
     {
         string json = JsonUtility.ToJson(data, true);
@@ -144,13 +144,13 @@ public class SaveManager : Singleton<SaveManager>
             else
             {
                 ShopData data = new ShopData(true);
-                data.purchasedProducts.Add(0); // ±âº» ½ºÅ²
+                data.purchasedProducts.Add(0); // ê¸°ë³¸ ìŠ¤í‚¨
                 return data;
             }
         }
         catch (Exception e)
         {
-            Debug.LogError($"ShopData ºÒ·¯¿À±â ½ÇÆĞ: {e.Message}");
+            Debug.LogError($"ShopData ë¶ˆëŸ¬ì˜¤ê¸° ì‹¤íŒ¨: {e.Message}");
             ShopData data = new ShopData(true);
             data.purchasedProducts.Add(0);
             return data;
@@ -158,7 +158,7 @@ public class SaveManager : Singleton<SaveManager>
     }
     #endregion
 
-    #region ÇÃ·¹ÀÌ¾î Ä¿½ºÅÍ¸¶ÀÌÂ¡ µ¥ÀÌÅÍ ÀúÀå/·Îµå
+    #region í”Œë ˆì´ì–´ ì»¤ìŠ¤í„°ë§ˆì´ì§• ë°ì´í„° ì €ì¥/ë¡œë“œ
     public void SaveCustomizationData(CustomizingData data)
     {
 
@@ -186,7 +186,7 @@ public class SaveManager : Singleton<SaveManager>
 
     #endregion
 
-    #region ¸®´õº¸µå µ¥ÀÌÅÍ ÀúÀå/·Îµå
+    #region ë¦¬ë”ë³´ë“œ ë°ì´í„° ì €ì¥/ë¡œë“œ
     public void SaveLeaderboardData(LeaderboardData data)
     {
         try
@@ -197,7 +197,7 @@ public class SaveManager : Singleton<SaveManager>
         }
         catch (Exception e)
         {
-            Debug.LogError($"LeaderboardData ÀúÀå ½ÇÆĞ: {e.Message}");
+            Debug.LogError($"LeaderboardData ì €ì¥ ì‹¤íŒ¨: {e.Message}");
         }
     }
 
@@ -215,19 +215,19 @@ public class SaveManager : Singleton<SaveManager>
             }
             else
             {
-                Debug.LogWarning("LeaderboardData ÆÄÀÏÀÌ ¾øÀ½_»õ·Î »ı¼º");
+                Debug.LogWarning("LeaderboardData íŒŒì¼ì´ ì—†ìŒ_ìƒˆë¡œ ìƒì„±");
                 return new LeaderboardData(true);
             }
         }
         catch (Exception e)
         {
-            Debug.LogError($"LeaderboardData ºÒ·¯¿À±â ½ÇÆĞ: {e.Message}");
+            Debug.LogError($"LeaderboardData ë¶ˆëŸ¬ì˜¤ê¸° ì‹¤íŒ¨: {e.Message}");
             return new LeaderboardData(true);
         }
     }
     #endregion
 
-    #region ÀüÃ¼ ÀúÀå/»èÁ¦
+    #region ì „ì²´ ì €ì¥/ì‚­ì œ
     public void SaveAll(PlayerData playerData, GameData gameData, LeaderboardData leaderboardData)
     {
         SavePlayerData(playerData);

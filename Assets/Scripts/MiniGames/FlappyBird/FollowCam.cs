@@ -12,7 +12,7 @@ public class FollowCam : MonoBehaviour
         if (target == null)
             return;
 
-        offsetX = transform.position.x - target.position.x; //Ä«¸Ş¶ó¿Í ÇÃ·¹ÀÌ¾î »çÀÌÀÇ °Å¸® ÀúÀå
+        offsetX = transform.position.x - target.position.x; //ì¹´ë©”ë¼ì™€ í”Œë ˆì´ì–´ ì‚¬ì´ì˜ ê±°ë¦¬ ì €ì¥
     }
 
     void Update()

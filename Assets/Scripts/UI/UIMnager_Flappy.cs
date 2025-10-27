@@ -6,18 +6,18 @@ using UnityEngine.UI;
 
 public class UIMnager_Flappy : MonoBehaviour
 {
-    [Header("¹öÆ°")]
+    [Header("ë²„íŠ¼")]
     [SerializeField] private Button restartBtn;
     [SerializeField] private Button goToMainBtn;
 
-    [Header("ÅØ½ºÆ®")]
+    [Header("í…ìŠ¤íŠ¸")]
     [SerializeField] private Text score_Txt;
     [SerializeField] private Text bestScore_Txt;
 
-    [Header("ÆĞ³Î")]
+    [Header("íŒ¨ë„")]
     [SerializeField] private GameObject gameOverPanel;
 
-    [Header("¸Å´ÏÀú")]
+    [Header("ì§ì ‘ ì°¸ì¡°")]
     [SerializeField] private MiniGameManager_Flappy gameManager_Mini;
 
     private int lastScore = -1;
@@ -51,7 +51,7 @@ public class UIMnager_Flappy : MonoBehaviour
         }
     }
 
-    #region ÀÌº¥Æ® ±¸µ¶/ÇØÁ¦
+    #region ì´ë²¤íŠ¸ êµ¬ë…/í•´ì œ
     private void SubscribeEvents()
     {
         restartBtn?.onClick.AddListener(OnRestartClick);
@@ -65,7 +65,7 @@ public class UIMnager_Flappy : MonoBehaviour
     }
     #endregion
 
-    #region ¹öÆ° ÀÌº¥Æ®
+    #region ë²„íŠ¼ ì´ë²¤íŠ¸
     private void OnRestartClick()
     {
         Time.timeScale = 1f;
@@ -79,7 +79,7 @@ public class UIMnager_Flappy : MonoBehaviour
     }
     #endregion
 
-    #region UI ¾÷µ¥ÀÌÆ®
+    #region UI ì—…ë°ì´íŠ¸
     private void UpdateScoreUI()
     {
         if (gameManager_Mini == null) return;

@@ -9,10 +9,10 @@ public class FlappyBirdStrategy : IPlayerStrategy
     private Animator animator;
     private Rigidbody2D rigid2D;
 
-    [Header("ÀÌµ¿ ¼³Á¤")]
-    [SerializeField] private float forwardSpeed;      // ¼Óµµ
-    [SerializeField] private float jumpForce;         // Á¡ÇÁ
-    [SerializeField] private float gravity;  // Áß·Â
+    [Header("ì´ë™ ì„¤ì •")]
+    [SerializeField] private float forwardSpeed;      // ì†ë„
+    [SerializeField] private float jumpForce;         // ì í”„
+    [SerializeField] private float gravity;  // ì¤‘ë ¥
 
     public FlappyBirdStrategy(float forwardSpeed = 3f, float jumpForce = 8f)
     {
@@ -40,7 +40,7 @@ public class FlappyBirdStrategy : IPlayerStrategy
         rigid2D.gravityScale = gravity;
     }
 
-    #region ÇÃ·¹ÀÌ¾î Á¦¾î
+    #region í”Œë ˆì´ì–´ ì œì–´
     public void HandleMove(InputAction.CallbackContext context)
     {
     }

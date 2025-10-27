@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
@@ -10,7 +10,7 @@ public class Dialogue
     public string speaker; 
     public string text;
     public List<DialogueChoice> choices; 
-    public int nextDialId;  // ´ÙÀ½ ´ëÈ­ ID -1ÀÌ¸é ´ëÈ­ Á¾·á
+    public int nextDialId;  // ë‹¤ìŒ ëŒ€í™” ID -1ì´ë©´ ëŒ€í™” ì¢…ë£Œ
 }
 
 [Serializable]

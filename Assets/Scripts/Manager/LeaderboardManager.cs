@@ -16,10 +16,10 @@ public class LeaderboardManager : Singleton<LeaderboardManager>
             {
                 GameLeaderboard gameLeaderboard = data.gameLeaderboards[i];
 
-                ScoreData newScore = new ScoreData(playerName, score); // °ª Å¸ÀÔ º¹»ç±â ¶§¹®¿¡ GC°¡ ¹ß»ý¾ÈÇÏ°í ÇÔ¼ö ³¡³ª¸é ¸Þ¸ð¸® ÇÒ´ç ÇØÁ¦, List¿¡ Ãß°¡ÇÏ·Á¸é »õ°´Ã¼ ÇÊ¿äÇØ¼­ »ç¿ë. List¿¡´Â º¹»çº»ÀÇ °ª¸¸ ³²À½
+                ScoreData newScore = new ScoreData(playerName, score); // ê°’ íƒ€ìž… ë³µì‚¬ê¸° ë•Œë¬¸ì— GCê°€ ë°œìƒì•ˆí•˜ê³  í•¨ìˆ˜ ëë‚˜ë©´ ë©”ëª¨ë¦¬ í• ë‹¹ í•´ì œ, Listì— ì¶”ê°€í•˜ë ¤ë©´ ìƒˆê°ì²´ í•„ìš”í•´ì„œ ì‚¬ìš©. Listì—ëŠ” ë³µì‚¬ë³¸ì˜ ê°’ë§Œ ë‚¨ìŒ
                 gameLeaderboard.scores.Add(newScore);
 
-                gameLeaderboard.scores.Sort((a, b) => b.score.CompareTo(a.score)); // ³»¸²Â÷ ¼ø Á¤·Ä
+                gameLeaderboard.scores.Sort((a, b) => b.score.CompareTo(a.score)); // ë‚´ë¦¼ì°¨ ìˆœ ì •ë ¬
 
                 if (gameLeaderboard.scores.Count > 10)
                 {

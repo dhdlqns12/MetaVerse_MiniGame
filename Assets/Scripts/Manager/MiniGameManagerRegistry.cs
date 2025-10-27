@@ -9,7 +9,7 @@ public static class MiniGameManagerRegistry
     public static void Register_MiniGame(IMiniGameManager manager)
     {
         curManager_Mini = manager;
-        Debug.Log($"¸Å´ÏÀú µî·Ï: {manager.GetType().Name}");
+        Debug.Log($"ë§¤ë‹ˆì € ë“±ë¡: {manager.GetType().Name}");
     }
 
     public static void Unregister_MIniGame(IMiniGameManager manager)
@@ -17,7 +17,7 @@ public static class MiniGameManagerRegistry
         if (curManager_Mini == manager)
         {
             curManager_Mini = null;
-            Debug.Log("¸Å´ÏÀú ÇØÁ¦");
+            Debug.Log("ë§¤ë‹ˆì € í•´ì œ");
         }
     }
 

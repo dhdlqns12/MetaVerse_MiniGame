@@ -5,11 +5,11 @@ using UnityEngine;
 
 public class ShopManager : MonoBehaviour
 {
-    [Header("Á÷Á¢ ÂüÁ¶")]
+    [Header("ì§ì ‘ ì°¸ì¡°")]
     [SerializeField] private PlayerCustomizing playerCustomizing;
     [SerializeField] private VehicleManager vehicleManager;
 
-    [Header("»óÇ° ¸®½ºÆ®")]
+    [Header("ìƒí’ˆ ë¦¬ìŠ¤íŠ¸")]
     public List<Product> characterSkin;
     public List<Product> vehicle;
 

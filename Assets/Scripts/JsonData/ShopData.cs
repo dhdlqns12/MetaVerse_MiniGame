@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
@@ -6,7 +6,7 @@ using System;
 [Serializable]
 public struct ShopData
 {
-    public List<int> purchasedProducts; // ±¸¸ÅÇÑ »óÇ° ID¸¸
+    public List<int> purchasedProducts; // êµ¬ë§¤í•œ ìƒí’ˆ IDë§Œ
 
     public ShopData(bool init)
     {

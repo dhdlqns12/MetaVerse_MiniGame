@@ -7,13 +7,13 @@ public class MiniGameManager_Poop : MonoBehaviour, IMiniGameManager
 {
     public bool IsGameOver { get; private set; }
 
-    [Header("Á¡¼ö")]
+    [Header("ì ìˆ˜")]
     public int curScore_Poop;
 
-    [Header("Å¸ÀÌ¸Ó")]
+    [Header("íƒ€ì´ë¨¸")]
     public float survivalTime = 0f;
 
-    [Header("½ºÆ÷³Ê")]
+    [Header("ìŠ¤í¬ë„ˆ")]
     [SerializeField] private PoopSpawner poopSpawner;
 
     private void OnEnable()
@@ -47,7 +47,7 @@ public class MiniGameManager_Poop : MonoBehaviour, IMiniGameManager
         IsGameOver = false;
     }
 
-    #region ¶ËÇÇÇÏ±â
+    #region ë˜¥í”¼í•˜ê¸°
     public void GameOver()
     {
         SaveBestScore();

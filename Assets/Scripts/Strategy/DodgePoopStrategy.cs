@@ -11,11 +11,11 @@ public class DodgePoopStrategy : IPlayerStrategy
     private Rigidbody2D rigid2D;
     private SpriteRenderer spriteRenderer;
 
-    [Header("ÀÌµ¿ ¼³Á¤")]
+    [Header("ì´ë™ ì„¤ì •")]
     [SerializeField] private float moveSpeed;
     [SerializeField] private Vector2 input_Vec2;
 
-    [Header("Ä«¸Ş¶ó ¹× °æ°è Á¦ÇÑ")]
+    [Header("ì¹´ë©”ë¼ ë° ê²½ê³„ ì œí•œ")]
     [SerializeField] private Camera mainCamera;
     [SerializeField] private float padding;
     [SerializeField] private Vector2 min;
@@ -51,14 +51,14 @@ public class DodgePoopStrategy : IPlayerStrategy
         animator?.SetBool(isMove_Hash, false);
     }
 
-    #region ÇÃ·¹ÀÌ¾î Á¦¾î
+    #region í”Œë ˆì´ì–´ ì œì–´
     public void HandleMove(InputAction.CallbackContext context)
     {
         Vector2 xInput = context.ReadValue<Vector2>();
 
         float normalizedX = 0f;
 
-        if (xInput.x > 0)            // w¶û d¸¦ µ¿½Ã¿¡ ´©¸£¸é ÀÌµ¿¼Óµµ°¡ »ìÂ¦ ´À·ÁÁö´Â ¹®Á¦ ¹ß»ı->x°ª Á¤±ÔÈ­
+        if (xInput.x > 0)            // wë‘ dë¥¼ ë™ì‹œì— ëˆ„ë¥´ë©´ ì´ë™ì†ë„ê°€ ì‚´ì§ ëŠë ¤ì§€ëŠ” ë¬¸ì œ ë°œìƒ->xê°’ ì •ê·œí™”
         {
             normalizedX = 1f;
         }

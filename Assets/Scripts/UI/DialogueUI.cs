@@ -31,7 +31,7 @@ public class DialogueUI : MonoBehaviour
         dialoguePanel?.SetActive(false);
     }
 
-    #region ¥Î»≠ º≥¡§
+    #region ÎåÄÌôî ÏÑ§Ï†ï
     public void StartDialogue(DialogueDataList dialogueData)
     {
         currentDialogue = dialogueData;
@@ -80,13 +80,13 @@ public class DialogueUI : MonoBehaviour
                 {
                     nextButton.gameObject.SetActive(true);
                     Text btnText = nextButton.GetComponentInChildren<Text>();
-                    if (btnText != null) btnText.text = "¥›±‚";
+                    if (btnText != null) btnText.text = "Îã´Í∏∞";
                 }
                 else
                 {
                     nextButton.gameObject.SetActive(true);
                     Text btnText = nextButton.GetComponentInChildren<Text>();
-                    if (btnText != null) btnText.text = "¥Ÿ¿Ω";
+                    if (btnText != null) btnText.text = "Îã§Ïùå";
                 }
             }
         }

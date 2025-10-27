@@ -5,14 +5,14 @@ using UnityEngine.UI;
 
 public class LeaderboardUI : MonoBehaviour
 {
-    [Header("Á¡¼ö ¸ñ·Ï")]
+    [Header("ì ìˆ˜ ëª©ë¡")]
     [SerializeField] private Transform flappyBirdList;
     [SerializeField] private Transform miniGame2List;
 
-    [Header("ÇÁ¸®ÆÕ")]
+    [Header("í”„ë¦¬íŒ¹")]
     [SerializeField] private GameObject scorePrefab;
 
-    [Header("°£°İ")]
+    [Header("ê°„ê²©")]
     [SerializeField] private float startYPos;
     [SerializeField] private float spacing;
 
@@ -57,7 +57,7 @@ public class LeaderboardUI : MonoBehaviour
 
                 rect.anchoredPosition = new Vector2(0, startYPos - (i * spacing));
 
-                entryText.text = $"{i + 1}. {top10[i].playerName} {top10[i].score}Á¡";
+                entryText.text = $"{i + 1}. {top10[i].playerName} {top10[i].score}ì ";
             }
         }
         else
@@ -73,7 +73,7 @@ public class LeaderboardUI : MonoBehaviour
 
             if (emptyText != null)
             {
-                emptyText.text = "±â·Ï ¾øÀ½";
+                emptyText.text = "ê¸°ë¡ ì—†ìŒ";
             }
         }
     }

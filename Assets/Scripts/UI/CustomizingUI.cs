@@ -5,22 +5,22 @@ using UnityEngine.UI;
 
 public class CustomizingUI : MonoBehaviour
 {
-    [Header("Á÷Á¢ ÂüÁ¶")]
+    [Header("ì§ì ‘ ì°¸ì¡°")]
     [SerializeField] private ShopManager shopManager;
     [SerializeField] private PlayerCustomizing playerCustomizing;
     [SerializeField] private VehicleManager vehicleManager;
 
-    [Header("ÅÇ ÀüÈ¯ ¹öÆ°")]
+    [Header("íƒ­ ì „í™˜ ë²„íŠ¼")]
     [SerializeField] private Button skinTabBtn;
     [SerializeField] private Button vehicleTabBtn;
     [SerializeField] private Button skinTabCloseBtn;
     [SerializeField] private Button vehicleTabCloseBtn;
 
-    [Header("ÅÇ ÆĞ³Î")]
+    [Header("íƒ­ íŒ¨ë„")]
     [SerializeField] private GameObject skinTabPanel;
     [SerializeField] private GameObject vehicleTabPanel;
 
-    [Header("ÇØ±İ ¸®½ºÆ®")]
+    [Header("í•´ê¸ˆ ë¦¬ìŠ¤íŠ¸")]
     [SerializeField] private Transform skinProductList; 
     [SerializeField] private Transform vehicleProductList; 
     [SerializeField] private GameObject customizingButtonPrefab;
@@ -53,7 +53,7 @@ public class CustomizingUI : MonoBehaviour
         vehicleTabCloseBtn?.onClick.RemoveListener(CloseVehicleTab);
     }
 
-    #region ½ºÅ²/Å»°Í ÅÇ ¿­±â/´İ±â
+    #region ìŠ¤í‚¨/íƒˆê²ƒ íƒ­ ì—´ê¸°/ë‹«ê¸°
     private void ShowSkinTab()
     {
         skinTabPanel?.SetActive(true);
@@ -79,7 +79,7 @@ public class CustomizingUI : MonoBehaviour
     }
     #endregion
 
-    #region Ä¿½ºÅÍ¸¶ÀÌÂ¡ ¸ñ·Ï »ı¼º/ÀåÂø
+    #region ì»¤ìŠ¤í„°ë§ˆì´ì§• ëª©ë¡ ìƒì„±/ì¥ì°©
     private void CreateCustomizingList(List<Product> products, Transform parent, ProductType type)
     {
         foreach (Transform child in parent)
@@ -89,7 +89,7 @@ public class CustomizingUI : MonoBehaviour
 
         foreach (Product product in products)
         {
-            if (!shopManager.IsPurchased(product.productID)) //±¸¸Å ¾ÈÇÑ »óÇ°(IsPurchased ¹İÈ¯°ªÀÌ false)´Â Continue·Î ½ºÅµ
+            if (!shopManager.IsPurchased(product.productID)) //êµ¬ë§¤ ì•ˆí•œ ìƒí’ˆ(IsPurchased ë°˜í™˜ê°’ì´ false)ëŠ” Continueë¡œ ìŠ¤í‚µ
                 continue;
 
             GameObject btnObj = Instantiate(customizingButtonPrefab, parent);
@@ -126,7 +126,7 @@ public class CustomizingUI : MonoBehaviour
                 Text btnText = equipBtn.GetComponentInChildren<Text>();
                 if (btnText != null)
                 {
-                    btnText.text = isEquipped ? "ÀåÂøÁß" : "Âø¿ë";
+                    btnText.text = isEquipped ? "ì¥ì°©ì¤‘" : "ì°©ìš©";
                 }
 
                 int productID = product.productID;
