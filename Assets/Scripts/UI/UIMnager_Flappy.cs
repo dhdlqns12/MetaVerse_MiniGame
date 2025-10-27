@@ -37,7 +37,7 @@ public class UIMnager_Flappy : MonoBehaviour
         UnsubscribeEvents();
     }
 
-    private void Update()
+    private void Update() // 이벤트 방식으로 해야 하는데 시간 부족... 시간 남으면 해보기
     {
         if (lastScore != gameManager_Mini.curScroe_Flappy)
         {
