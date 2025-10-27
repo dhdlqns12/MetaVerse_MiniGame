@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.EventSystems;
 
-public class PlayerController : MonoBehaviour // 전략 패턴으로 한 스크립트로 모든 미니게임 밑 메타버스 상황 제어
+public class PlayerController : MonoBehaviour // 전략 패턴으로 한 스크립트로 모든 미니게임 밑 메타버스 상태 제어
 {
     [Header("전략")]
     [SerializeField] private StrategyType initStrategy;
