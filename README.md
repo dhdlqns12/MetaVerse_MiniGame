@@ -111,3 +111,4 @@
 
 ## 5. 명시사항
 \AppData\LocalLow\DefaultCompany\4week Project\SaveData 경로에 세이브 데이터들이 저장되니 테스트 후 삭제 필요
+미니게임 씬 개별로 동작 불가 Main씬에서 시작 필요
