@@ -318,7 +318,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uD0C8\uAC83 \uC0C1"
+  m_Text: "\uD0C8\uAC83 \uC0C1\uC810"
 --- !u!222 &77343704
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2992,7 +2992,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uBBF8\uB2C8\uAC8C\uC7842"
+  m_Text: DodgePoop
 --- !u!222 &541537404
 CanvasRenderer:
   m_ObjectHideFlags: 0
